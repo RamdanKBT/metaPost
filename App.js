@@ -27,6 +27,10 @@ export default function App() {
             source={{ uri: post.User.image }}
             style={styles.profileImage}
           />
+          <View>
+            <Text style={styles.name}>{post.User.name}</Text>
+            <Text style={styles.subtitle}>{post.createdAt}</Text>
+          </View>
         </View>
 
         {/* Body with decription and image */}

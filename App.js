@@ -1,6 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
-import { Entypo } from "@expo/vector-icons";
+import {
+  Entypo,
+  AntDesign,
+  FontAwesome5,
+  MaterialCommunityIcons,
+} from "@expo/vector-icons";
 import likeImage from "./assets/images/like.png";
 
 const post = {
@@ -51,12 +56,35 @@ export default function App() {
 
         {/*Footer with likes and buttons*/}
         <View style={styles.footer}>
+          {/*first row of the footer aka stats*/}
           <View style={styles.statsRow}>
             <Image source={likeImage} style={styles.likeIcon} />
             <Text style={styles.likedBy}>
               Elon Musk and {post.numberOfLikes} others
             </Text>
             <Text style={styles.shares}>{post.numberOfShares} shares</Text>
+          </View>
+          {/* second row of the footer aka buttons*/}
+          <View style={styles.buttonsRow}>
+            {/* Like button */}
+            <View style={styles.iconButton}>
+              <AntDesign name="like2" size={18} color="gray" />
+              <Text style={styles.iconButtonText}>Like</Text>
+            </View>
+            {/* Comment button */}
+            <View style={styles.iconButton}>
+              <FontAwesome5 name="comment-alt" size={16} color="gray" />
+              <Text style={styles.iconButtonText}>Comment</Text>
+            </View>
+            {/* Share button */}
+            <View style={styles.iconButton}>
+              <MaterialCommunityIcons
+                name="share-outline"
+                size={18}
+                color="gray"
+              />
+              <Text style={styles.iconButtonText}>Share</Text>
+            </View>
           </View>
         </View>
       </View>
@@ -115,6 +143,7 @@ const styles = StyleSheet.create({
   footer: {
     paddingHorizontal: 10,
   },
+  // first footer row aka stats
   statsRow: {
     paddingVertical: 10,
     flexDirection: "row",
@@ -132,5 +161,20 @@ const styles = StyleSheet.create({
   shares: {
     marginLeft: "auto",
     color: "grey",
+  },
+  // second footer row aka buttons
+  buttonsRow: {
+    marginVertical: 10,
+    flexDirection: "row",
+    justifyContent: "space-around",
+  },
+  iconButton: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  iconButtonText: {
+    color: "gray",
+    marginLeft: 5,
+    fontWeight: "500",
   },
 });

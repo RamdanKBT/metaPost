@@ -32,7 +32,12 @@ export default function App() {
             <Text style={styles.name}>{post.User.name}</Text>
             <Text style={styles.subtitle}>{post.createdAt}</Text>
           </View>
-          <Entypo name="dots-three-horizontal" size={24} color="black" />
+          <Entypo
+            name="dots-three-horizontal"
+            size={18}
+            color="grey"
+            style={styles.icon}
+          />
         </View>
 
         {/* Body with decription and image */}
@@ -52,8 +57,19 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  post: { width: "100%" },
+  header: {
+    backgroundColor: "purple",
+    width: "100%",
+    flexDirection: "row",
+    alignItems: "center",
+    padding: 10,
+  },
   profileImage: {
     width: 50,
     height: 50,
   },
+  name: {},
+  subtitle: {},
+  icon: {},
 });

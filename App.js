@@ -71,5 +71,7 @@ const styles = StyleSheet.create({
   },
   name: {},
   subtitle: {},
-  icon: {},
+  icon: {
+    marginLeft: "auto",
+  },
 });

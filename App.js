@@ -42,10 +42,14 @@ export default function App() {
 
         {/* Body with decription and image */}
         <Text style={styles.description}>{post.description}</Text>
-        <Image source={{ uri: post.image }} style={styles.image} />
+        {post.image && (
+          <Image source={{ uri: post.image }} style={styles.image} />
+        )}
 
         {/*Footer with likes and buttons*/}
-        <View style={styles.footer}></View>
+        <View style={styles.footer}>
+          <Text>footer</Text>
+        </View>
       </View>
       <StatusBar style="auto" />
     </View>

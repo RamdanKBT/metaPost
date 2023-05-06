@@ -41,7 +41,9 @@ export default function App() {
         </View>
 
         {/* Body with decription and image */}
-        <Text style={styles.description}>{post.description}</Text>
+        {post.description && (
+          <Text style={styles.description}>{post.description}</Text>
+        )}
         {post.image && (
           <Image source={{ uri: post.image }} style={styles.image} />
         )}

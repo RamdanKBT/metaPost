@@ -22,7 +22,12 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.post}>
         {/* Header with details about author */}
-        <View style={styles.header}></View>
+        <View style={styles.header}>
+          <Image
+            source={{ uri: post.User.image }}
+            style={styles.profileImage}
+          />
+        </View>
 
         {/* Body with decription and image */}
 
@@ -40,5 +45,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  profileImage: {
+    width: 50,
+    height: 50,
   },
 });

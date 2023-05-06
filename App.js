@@ -41,6 +41,8 @@ export default function App() {
         </View>
 
         {/* Body with decription and image */}
+        <Text style={styles.description}>{post.description}</Text>
+        <Image source={{ uri: post.image }} style={styles.image} />
 
         {/*Footer with likes and buttons*/}
         <View style={styles.footer}></View>
@@ -60,8 +62,9 @@ const styles = StyleSheet.create({
   post: {
     width: "100%",
     marginVertical: 10, // add some margin at he bottom so the posts that are under eachother don't touch
-    backgroundColor: "blue",
+    backgroundColor: "#fff",
   },
+  //HEADER
   header: {
     backgroundColor: "purple",
     width: "100%",
@@ -83,5 +86,16 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginLeft: "auto", // put something as far left as possible
+  },
+  //BODY
+  description: {
+    paddingHorizontal: 10,
+    lineHeight: 20,
+    letterSpacing: 0.3,
+  },
+  image: {
+    width: "100%",
+    aspectRatio: 1,
+    marginTop: 10,
   },
 });

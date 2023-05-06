@@ -57,7 +57,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  post: { width: "100%" },
+  post: {
+    width: "100%",
+    marginVertical: 10, // add some margin at he bottom so the posts that are under eachother don't touch
+    backgroundColor: "blue",
+  },
   header: {
     backgroundColor: "purple",
     width: "100%",
@@ -68,8 +72,8 @@ const styles = StyleSheet.create({
   profileImage: {
     width: 50,
     height: 50,
-    borderRadius: 25,
-    marginRight: 10, // will always be a circle if the number is half of width or height
+    borderRadius: 25, // will always be a circle if the number is half of width or height
+    marginRight: 10, // add some space to the right of the rounded off profile picture
   },
   name: {
     fontWeight: "500",
@@ -78,6 +82,6 @@ const styles = StyleSheet.create({
     color: "grey",
   },
   icon: {
-    marginLeft: "auto",
+    marginLeft: "auto", // put something as far left as possible
   },
 });

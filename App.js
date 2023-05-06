@@ -68,9 +68,15 @@ const styles = StyleSheet.create({
   profileImage: {
     width: 50,
     height: 50,
+    borderRadius: 25,
+    marginRight: 10, // will always be a circle if the number is half of width or height
   },
-  name: {},
-  subtitle: {},
+  name: {
+    fontWeight: "500",
+  },
+  subtitle: {
+    color: "grey",
+  },
   icon: {
     marginLeft: "auto",
   },

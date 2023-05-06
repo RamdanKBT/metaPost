@@ -87,12 +87,6 @@ const FeedPost = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
   post: {
     width: "100%",
     marginVertical: 10, // add some margin at he bottom so the posts that are under eachother don't touch

@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
+import { Entypo } from "@expo/vector-icons";
 
 const post = {
   id: "p1",
@@ -31,6 +32,7 @@ export default function App() {
             <Text style={styles.name}>{post.User.name}</Text>
             <Text style={styles.subtitle}>{post.createdAt}</Text>
           </View>
+          <Entypo name="dots-three-horizontal" size={24} color="black" />
         </View>
 
         {/* Body with decription and image */}

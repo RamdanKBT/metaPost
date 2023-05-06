@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Image } from "react-native";
 import {
   Entypo,
@@ -6,7 +5,7 @@ import {
   FontAwesome5,
   MaterialCommunityIcons,
 } from "@expo/vector-icons";
-import likeImage from "./assets/images/like.png";
+import likeImage from "../../assets/images/like.png";
 
 const post = {
   id: "p1",

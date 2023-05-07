@@ -1,7 +1,46 @@
-import { Text } from "react-native";
+import { Text, StyleSheet, View, Image } from "react-native";
+
+const user = {
+  id: "u1",
+  image:
+    "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg",
+  name: "Vadim Savin",
+};
 
 const CreatePostScreen = () => {
-  return <Text>Create Post screen</Text>;
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Image source={{ uri: user.image }} style={styles.profileImage} />
+        <Text style={styles.name}>{user.name}</Text>
+      </View>
+      <Text>Create a post</Text>
+    </View>
+  );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    width: "100%",
+    padding: 10,
+    paddingTop: 30,
+    backgroundColor: "#fff",
+  },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    width: "100%",
+  },
+  profileImage: {
+    width: 40,
+    height: 40,
+    borderRadius: 25,
+    marginRight: 10,
+  },
+  name: {
+    fontWeight: "500",
+  },
+});
 
 export default CreatePostScreen;

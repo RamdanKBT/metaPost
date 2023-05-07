@@ -8,6 +8,10 @@ const user = {
 };
 
 const CreatePostScreen = () => {
+  const onSubmit = () => {
+    console.warn("onSubmit");
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -16,7 +20,7 @@ const CreatePostScreen = () => {
       </View>
       <Text>Create a post</Text>
       <TextInput placeholder="write here" multiline></TextInput>
-      <Button title="Post" />
+      <Button title="Post" onPress={onSubmit} />
     </View>
   );
 };

@@ -29,7 +29,9 @@ const CreatePostScreen = () => {
         placeholder="write your thoughts here..."
         multiline
       ></TextInput>
-      <Button title="Post" onPress={onSubmit} />
+      <View style={styles.buttonContainer}>
+        <Button title="Post" onPress={onSubmit} />
+      </View>
     </View>
   );
 };
@@ -56,6 +58,9 @@ const styles = StyleSheet.create({
   },
   name: {
     fontWeight: "500",
+  },
+  buttonContainer: {
+    marginTop: "auto",
   },
 });
 

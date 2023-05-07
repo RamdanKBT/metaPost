@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, Image } from "react-native";
+import { Text, StyleSheet, View, Image, TextInput } from "react-native";
 
 const user = {
   id: "u1",
@@ -15,6 +15,7 @@ const CreatePostScreen = () => {
         <Text style={styles.name}>{user.name}</Text>
       </View>
       <Text>Create a post</Text>
+      <TextInput placeholder="write here"></TextInput>
     </View>
   );
 };

@@ -12,7 +12,7 @@ const CreatePostScreen = () => {
   const [description, setDescription] = useState("hello there...");
 
   const onSubmit = () => {
-    console.warn("onSubmit");
+    console.warn("onSubmit", description);
   };
 
   return (

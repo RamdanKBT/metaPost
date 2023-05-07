@@ -9,9 +9,8 @@ const user = {
 };
 
 const CreatePostScreen = () => {
-  const descriptionState = useState("hello"); // is an array of 2 values
-  const description = descriptionState[0]; // 1st value in the array, the actual description of our state = hello
-  const setDescription = descriptionState[1]; // 2nd value in the array, use this to change hello into somethimg else
+  const [description, setDescription] = useState("hello");
+
   console.warn("Descr", description);
 
   const onSubmit = () => {

@@ -9,10 +9,11 @@ const user = {
 };
 
 const CreatePostScreen = () => {
-  const [description, setDescription] = useState("hello there...");
+  const [description, setDescription] = useState("");
 
   const onSubmit = () => {
     console.warn("onSubmit", description);
+    setDescription("");
   };
 
   return (
@@ -25,6 +26,7 @@ const CreatePostScreen = () => {
       <TextInput
         value={description}
         onChangeText={setDescription}
+        placeholder="write your thoughts here..."
         multiline
       ></TextInput>
       <Button title="Post" onPress={onSubmit} />

@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, Image, TextInput } from "react-native";
+import { Text, StyleSheet, View, Image, TextInput, Button } from "react-native";
 
 const user = {
   id: "u1",
@@ -16,6 +16,7 @@ const CreatePostScreen = () => {
       </View>
       <Text>Create a post</Text>
       <TextInput placeholder="write here" multiline></TextInput>
+      <Button title="Post" />
     </View>
   );
 };
@@ -32,6 +33,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     width: "100%",
+    marginBottom: 10,
   },
   profileImage: {
     width: 40,

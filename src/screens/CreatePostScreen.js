@@ -15,7 +15,7 @@ const CreatePostScreen = () => {
         <Text style={styles.name}>{user.name}</Text>
       </View>
       <Text>Create a post</Text>
-      <TextInput placeholder="write here"></TextInput>
+      <TextInput placeholder="write here" multiline></TextInput>
     </View>
   );
 };

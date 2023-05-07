@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, FlatList } from "react-native";
 
 import FeedPost from "./src/components/FeedPost";
 import posts from "./assets/data/posts.json";

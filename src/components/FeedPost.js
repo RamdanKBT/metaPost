@@ -23,7 +23,7 @@ const post = {
   numberOfShares: 2,
 };
 
-const FeedPost = () => {
+const FeedPost = ({ post }) => {
   return (
     <View style={styles.post}>
       {/* Header with details about author */}
